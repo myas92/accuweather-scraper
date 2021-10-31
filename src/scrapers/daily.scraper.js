@@ -61,7 +61,7 @@ class DailyScraper {
         for (const weather of weathers) {
             const month = moment(weather.time, 'YYYY/M/D').format("MMMM").toLowerCase();
             const year = moment(weather.time, 'YYYY/M/D').format("YYYY");
-            const path = `${year}-${month}.json`
+            const path = `${process.cwd()}/storage/${year}-${month}.json`;
             if (fs.existsSync(path)) {
                 let weatherFromFile = JSON.parse(fs.readFileSync(path, 'utf-8'));
 
@@ -71,7 +71,7 @@ class DailyScraper {
                     }
                     return item
                 })
-                fs.writeFileSync(`${year}-${month}.json`, JSON.stringify(updatedWeathers))
+                fs.writeFileSync(path, JSON.stringify(updatedWeathers))
             }
         }
     }

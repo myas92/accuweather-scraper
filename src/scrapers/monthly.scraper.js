@@ -53,7 +53,7 @@ class MonthScraper {
     }
 
     save(year, month, weathers) {
-        const fileName = `${year}-${month}.json`
+        const fileName = `${process.cwd()}/storage/${year}-${month}.json`
         fs.writeFileSync(fileName, JSON.stringify(weathers));
         return fileName
     }
