@@ -2,6 +2,9 @@
 
 The [cheerio](https://www.npmjs.com/package/cheerio) module was used to scrap the data
 
+# Test
+npm run test
+
 # Part one
 ## Get status monthly weather
 
