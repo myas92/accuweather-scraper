@@ -1,0 +1,5 @@
+{
+
+    "testRegex": "(/___tests___/.*|(\\.|/)(test|spec))\\.(js?|jsx?|tsx?)$",
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"]
+}

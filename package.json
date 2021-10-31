@@ -1,0 +1,34 @@
+{
+  "name": "accuweather-scraper",
+  "version": "0.0.0",
+  "description": "get weather from accuweather.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --config jestconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myas92/accuweather-scraper.git"
+  },
+  "keywords": [
+    "accuweather",
+    "weather",
+    "scraper"
+  ],
+  "author": "Yaser Ahmadi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/myas92/accuweather-scraper/issues"
+  },
+  "homepage": "https://github.com/myas92/accuweather-scraper#readme",
+  "dependencies": {
+    "async": "^3.2.2",
+    "axios": "^0.24.0",
+    "cheerio": "^1.0.0-rc.10",
+    "moment": "^2.29.1",
+    "q": "^1.5.1"
+  },
+  "devDependencies": {
+    "jest": "^27.3.1"
+  }
+}
