@@ -30,8 +30,8 @@ await weatherMonthly.parallelRequestsAllSettled('2021');
 await weatherMonthly.parallelRequestsAsyncEach('2021');
 //creatad 2021-october.json
 ```
-**NOTE** : `parallelRequestsAllSettled` and `parallelRequestsAsyncEach` They do the same thing but in two completely different ways
 
+**NOTE** : `parallelRequestsAllSettled` and `parallelRequestsAsyncEach` They do the same thing but in two completely different ways
 
 ## Sample of created json files
 ```
@@ -51,6 +51,9 @@ await weatherMonthly.parallelRequestsAsyncEach('2021');
     .
 ]
 ```
+
+
+
 # Part two
 
 After getting for status weather all months we can run daily scripts;
@@ -74,5 +77,38 @@ weatherDaily.parallelRequestsAllSettled('2021');
 weatherDaily.parallelRequestsAsyncEach()
 
 ```
+
+## Sample of updated .json file
+
+```
+
+{
+        "time": "2021/11/29",
+        "high": "11°",
+        "low": "4°",
+        "meta": {
+            "day": "Mon",
+            "time": "2021/11/29",
+            "high": "11°",
+            "low": "4°",
+            "status": "Mostly sunny",
+            "percent": "7%"
+        }
+    },
+    {
+        "time": "2021/11/30",
+        "high": "10°",
+        "low": "4°",
+        "meta": {
+            "day": "Tue",
+            "time": "2021/11/30",
+            "high": "10°",
+            "low": "4°",
+            "status": "Windy with periods of rain",
+            "percent": "64%"
+        }
+    }
+```
+
 
 **NOTE** : `parallelRequestsAllSettled` and `parallelRequestsAsyncEach` They do the same thing but in two completely 
