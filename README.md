@@ -1,7 +1,8 @@
 # Accuweather Scraper
 
-The (cheerio)[https://www.npmjs.com/package/cheerio] module was used to scrap the data
+The [cheerio](https://www.npmjs.com/package/cheerio) module was used to scrap the data
 
+# Part one
 ## Get status monthly weather
 
 Created a .json file based on year and month
@@ -29,10 +30,10 @@ await weatherMonthly.parallelRequestsAllSettled('2021');
 await weatherMonthly.parallelRequestsAsyncEach('2021');
 //creatad 2021-october.json
 ```
-### NOTE: `parallelRequestsAllSettled` and `parallelRequestsAsyncEach` They do the same thing but in two completely different ways
+**NOTE** : `parallelRequestsAllSettled` and `parallelRequestsAsyncEach` They do the same thing but in two completely different ways
 
 
-Sample of created json files
+## Sample of created json files
 ```
 [
     {
@@ -50,14 +51,28 @@ Sample of created json files
     .
 ]
 ```
-
+# Part two
 
 After getting for status weather all months we can run daily scripts;
 
-```
+```javascript
 const WeatherDaily = require('./src/controller/weather-daily.controller');
 
 const weatherDaily = new WeatherDaily('gb', 'london');
 weatherDaily.singleRequest()
 
 ```
+## parallelRequestsAllSettled
+send parallel requests to get satus weather 
+
+```javascript
+const WeatherDaily = require('./src/controller/weather-daily.controller');
+
+const weatherDaily = new WeatherDaily('gb', 'london');
+weatherDaily.parallelRequestsAllSettled('2021');
+//or
+weatherDaily.parallelRequestsAsyncEach()
+
+```
+
+**NOTE** : `parallelRequestsAllSettled` and `parallelRequestsAsyncEach` They do the same thing but in two completely 

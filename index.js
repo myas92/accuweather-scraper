@@ -12,14 +12,14 @@ const weatherDaily = new WeatherDaily('gb', 'london')
 
 
 async function run() {
-    await weatherMonthly.singleRequest('october');
+    // await weatherMonthly.singleRequest('october');
     await weatherMonthly.parallelRequestsAllSettled('2021');
-    await weatherMonthly.parallelRequestsAsyncEach('2021');
+    // await weatherMonthly.parallelRequestsAsyncEach('2021');
 
     // -----------------------------------------------------------------
-    weatherDaily.singleRequest()
+    // weatherDaily.singleRequest()
     weatherDaily.parallelRequestsAllSettled()
-    weatherDaily.parallelRequestsAsyncEach()
+    // weatherDaily.parallelRequestsAsyncEach()
 }
 
 

@@ -1,6 +1,6 @@
 {
   "name": "accuweather-scraper",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "get weather from accuweather.com",
   "main": "index.js",
   "scripts": {
