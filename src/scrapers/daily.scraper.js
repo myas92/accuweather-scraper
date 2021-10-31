@@ -53,6 +53,10 @@ class DailyScraper {
         return weathersOfCurrentMonth;
     }
 
+    /**
+     * Merge daily Info with monthly info
+     * @param {*} weathers The list of status Weathers
+     */
     async save(weathers) {
         for (const weather of weathers) {
             const month = moment(weather.time, 'YYYY/M/D').format("MMMM").toLowerCase();
